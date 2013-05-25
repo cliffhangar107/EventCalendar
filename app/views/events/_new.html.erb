@@ -1,2 +1,25 @@
-<h2>New Event</h2>
-Form here...
+<%= form_for Event.new(date: Time.now + 2.days) do |f| %>
+	<fieldset>
+		<legend>New Event</legend>
+
+		<div class='row'>
+			<div class="large-12 columns">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+		</div>
+
+		<div class='row'>
+			<div class="large-12 columns">
+        <%= f.label :date %>
+        <%= f.text_field :date %>
+      </div>
+		</div>
+
+		<div class='row'>
+			<div class='large-1 columns'>
+				<%= f.submit class: 'tiny secondary button' %>
+			</div>
+		</div>
+	</fieldset>
+<% end %>

@@ -9,12 +9,12 @@ class EventsController < ApplicationController
 
 	end
 
-	def new
-
-	end
-
 	def create
+		@event = Event.new(name: params[:event][:name], date: params[:event][:date].to_datetime)
 
+		if @event.save!
+			redirect_to events_path
+		end
 	end
 
 	def edit
