@@ -1,6 +1,6 @@
 <div class='row event-row' data-event='<%= event.id %>'>
 	<div class='large-6 large-offset-1 columns'>
 		<h4><%= event.name %></h4>
-		<%= event.date %>
+		<%= event.start_date %> <%= "to #{event.end_date}" if event.end_date.present? %>
 	</div>
 </div>
