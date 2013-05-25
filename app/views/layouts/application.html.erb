@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title>EventCalendar</title>
+	  <title><%= content_for?(:title) ? yield(:title) : "EventCalendar" %></title>
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
-	  <%= javascript_include_tag "application" %>
+	  <%= javascript_include_tag "application", "vendor/custom.modernizr" %>
 	  <%= csrf_meta_tags %>
 
 	  <%= yield :head %>
 	</head>
 	<body>
+		<%= render 'layouts/header' %>
+
 		<%= yield %>
+
+		<%= render 'layouts/footer' %>
 	</body>
 </html>
