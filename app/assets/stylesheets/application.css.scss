@@ -31,9 +31,26 @@ body {
 	}
 }
 
-#header {
-	background-color: black;
-	height: 75px;
+.top-bar {
+	margin: 0 !important;
+}
+
+#main-body {
+	margin-top: 45px;
+
+	.page-title {
+		border-bottom: 1px solid rgb(214, 214, 214);
+
+		h2 {
+			margin-bottom: 10px;
+			margin-top: 10px;
+		}
+
+		.buttons {
+			float: right;
+			top: 20px;
+		}
+	}
 }
 
 footer {
