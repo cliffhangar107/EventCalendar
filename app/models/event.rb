@@ -1,4 +1,4 @@
 class Event < ActiveRecord::Base
-	validates :date, presence: true
+	validates :start_date, :name, presence: true
 
 end

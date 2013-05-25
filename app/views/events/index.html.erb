@@ -1,0 +1,18 @@
+<div class='events-container'>
+	<div class='row page-title'>
+		<div class='large-4 columns'>
+			<h2>Event List</h2>
+		</div>
+		<div class='large-1 large-offset-3 columns buttons'>
+			<%= link_to 'Add', '#', class: 'small button', 'data-reveal-id' => 'new-event' %>
+		</div>
+	</div>
+
+	<% @events.each do |event| %>
+		<%= render 'event_row', event: event %>
+	<% end %>
+
+	<div id="new-event" class="reveal-modal medium">
+	  <%= render 'new' %>
+	</div>
+</div>
